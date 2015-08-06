@@ -1,53 +1,57 @@
 // Resets, Clearfix, etc
-@import 'partials/reset';
-@import 'partials/clearfix';
+@import "partials/reset";
+@import "partials/clearfix";
 // Variables
-// $test: black;
-$dark: #A66900;
-$light: #FFA100;
-$bright: #0F4dAF;
-$padding: 10px;
+
+
 // Media Query Ranges
-$medium-size: "only screen and (min-width: 600px)";
-$large-size: "only screen and (min-width: 900px)";
 
 // Mixins
 
 // Styles
 body{
-  background-color: $light;
+  background-color: orange;
   text-align: center;
   color: #EEE;
-
-  @media #{$medium-size} {
-    background-color: $bright;
-  }
-
-  @media #{$large-size} {
-    background-color: $dark;
-  }
 }
 
-h1, h2, h3, h4{
+h1, h2 {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 h1{
+  background-color: blue;
   padding: 20px;
+  font-size: 55px;
 }
 
 h2{
-
+  background-color: black;
+  font-size: 35px;
 }
 
 
-.block_family{
+ul.block_family {
+  background-color: pink;
   max-width:350px;
   margin:auto;
 }
 
-.block_family li{
+ul.block_family li{
   background-color: #222;
   margin-bottom: 20px;
   padding: 20px;
+}
+
+//medium styles
+@media only screen and (min-width: 600px){
+  ul.block_family {
+    max-width: 500px;
+  };
+};
+
+@media only screen and (min-width: 900px) {
+  ul.block_family {
+    max-width: 800px;
+  }
 }
